@@ -16,7 +16,6 @@ public class AppBot implements EventListener{
         JDA jda = JDABuilder.createDefault("")
                 .addEventListeners(new AppBot())
                 .build();
-
         jda.addEventListener(new Embed());
     }
     @Override
