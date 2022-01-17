@@ -13,7 +13,7 @@ public class AppBot implements EventListener{
 
     public static void main(String[] args) throws LoginException{
 
-        JDA jda = JDABuilder.createDefault("")
+        JDA jda = JDABuilder.createDefault("OTMyNDM4MTYxNzQ4MDA4OTcw.YeS-tQ.PedCAdAhuV0s7VESOOKMbIzuA9g")
                 .addEventListeners(new AppBot())
                 .build();
         jda.addEventListener(new Embed());
