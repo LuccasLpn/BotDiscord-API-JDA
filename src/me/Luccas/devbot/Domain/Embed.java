@@ -6,34 +6,16 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
-import java.text.Format;
-import java.text.SimpleDateFormat;
 import java.time.Instant;
-import java.time.LocalDateTime;
 
-public class Embed extends ListenerAdapter{
+public class Embed extends ListenerAdapter {
 
-    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+
 
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
         String[] message = event.getMessage().getContentRaw().split(" ");
-        if (message.length == 1 && message[0].equalsIgnoreCase("!WellCome")) {
-            EmbedBuilder eb = new EmbedBuilder();
-            eb.setAuthor("@" + event.getMember().getUser().getAsTag(),
-                    null,
-                    "https://cdn.discordapp.com/attachments/815332091994177557/932438282468483152/logo.jpg");
-            eb.setTitle("Entrada! " + ":clap:");
-            eb.setDescription("@" + event.getMember().getUser().getAsTag() + ", Seja Bem-Vindo a Gaseous Design");
-            eb.setThumbnail("https://cdn.discordapp.com/attachments/815332091994177557/932438282468483152/logo.jpg");
-            eb.setColor(Color.black);
-            eb.setImage("https://cdn.discordapp.com/attachments/815332091994177557/932474864323936376/bem-vindo.png");
-            eb.setFooter("Gaseous Corp © Todos os Direitos Reservado! ",
-                    "https://cdn.discordapp.com/attachments/815332091994177557/932438282468483152/logo.jpg");
-            eb.setTimestamp(Instant.now());
-            event.getChannel().sendMessageEmbeds(eb.build()).queue();
-        }
-        else if (message.length == 1 && message[0].equalsIgnoreCase("!Convite")){
+        if (message.length == 1 && message[0].equalsIgnoreCase("!Convite")){
             EmbedBuilder eb = new EmbedBuilder();
             eb.setTitle("CONVITE");
             eb.setDescription("https://discord.gg/7cjscrhV");
@@ -43,7 +25,6 @@ public class Embed extends ListenerAdapter{
             eb.setTimestamp(Instant.now());
             event.getChannel().sendMessageEmbeds(eb.build()).queue();
         }
-
         else if (message.length == 1 && message[0].equalsIgnoreCase("!Horario")){
             EmbedBuilder eb = new EmbedBuilder();
             eb.setTitle(":watch: | Horário de atendimento");
@@ -55,5 +36,9 @@ public class Embed extends ListenerAdapter{
             event.getChannel().sendMessageEmbeds(eb.build()).queue();
         }
     }
-
 }
+
+
+
+
+
