@@ -1,4 +1,4 @@
-package me.Luccas.devbot.Domain;
+package me.Luccas.devbot.Embed;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
